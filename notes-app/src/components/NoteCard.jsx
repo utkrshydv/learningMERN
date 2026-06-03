@@ -1,4 +1,4 @@
-function NoteCard({ note, onDelete }) {
+function NoteCard({ note, onDelete, onEdit }) {
   return (
     <article className="note-card">
       {/* Note title */}
@@ -16,6 +16,12 @@ function NoteCard({ note, onDelete }) {
         aria-label={`Delete note: ${note.header}`}
       >
         Delete
+      </button>
+      <button
+      className="btn btn-edit"
+      onClick={() => onEdit(note)}
+      >
+        Edit
       </button>
     </article>
   );

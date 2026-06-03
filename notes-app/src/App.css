@@ -225,6 +225,16 @@
   padding: 8px 16px;
 }
 
+.btn-edit {
+  /* Red background for delete action */
+  background-color: #1565c0;
+  color: white;
+  
+  /* Smaller size for compact look */
+  padding: 8px 16px;
+  margin-left: 5px;
+}
+
 /* Hover effect on delete button */
 .btn-delete:hover {
   /* Darker red on hover */

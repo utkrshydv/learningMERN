@@ -1,4 +1,4 @@
-function NoteForm({ header, body, setHeader, setBody, addNote }) {
+function NoteForm({ header, body, setHeader, setBody, addNote,editingId }) {
   return (
     <form
       className="note-form"
@@ -35,7 +35,7 @@ function NoteForm({ header, body, setHeader, setBody, addNote }) {
 
       {/* Submit button */}
       <button className="btn btn-submit" type="submit">
-        Add Note
+       { editingId === null ? "Add Note" : "Update Note"}
       </button>
     </form>
   );
