@@ -1,0 +1,30 @@
+/* ===================================
+   RESET AND GLOBAL STYLES
+   =================================== */
+
+/* Reset default margins and padding on all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Include padding and border in element width/height */
+}
+
+/* Basic body styling - sets font and background */
+body {
+  /* Use a simple, readable font family */
+  font-family: Arial, Helvetica, sans-serif;
+  
+  /* Light gray background */
+  background-color: #f5f5f5;
+  
+  /* Smooth text rendering */
+  line-height: 1.6;
+  color: #333; /* Dark gray text for readability */
+}
+
+/* Ensure the root element takes full height */
+html,
+body,
+#root {
+  height: 100%;
+}

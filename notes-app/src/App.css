@@ -1,0 +1,377 @@
+/* ===================================
+   APP MAIN CONTAINER
+   =================================== */
+
+.app {
+  /* Set max width to keep content centered and readable */
+  max-width: 900px;
+  
+  /* Center the app horizontally on the page */
+  margin: 0 auto;
+  
+  /* Add padding on sides for mobile devices */
+  padding: 20px;
+}
+
+/* ===================================
+   APP HEADER (Title Section)
+   =================================== */
+
+.app-header {
+  /* Center the text */
+  text-align: center;
+  
+  /* Add space between header and content */
+  margin-bottom: 40px;
+  
+  /* Add padding around the content inside the header */
+  padding: 40px 20px;
+  
+  /* Light blue background for visual appeal */
+  background-color: #e3f2fd;
+  
+  /* Round the corners of the header */
+  border-radius: 10px;
+}
+
+.app-header h1 {
+  /* Large, bold heading */
+  font-size: 2.5rem;
+  font-weight: bold;
+  
+  /* Blue color for the main title */
+  color: #1976d2;
+  
+  /* Space between title and subtitle */
+  margin-bottom: 10px;
+}
+
+.app-header p {
+  /* Smaller, lighter text for subtitle */
+  font-size: 1rem;
+  color: #666;
+}
+
+/* ===================================
+   APP CONTENT (Main Layout)
+   =================================== */
+
+.app-content {
+  /* Add space between sections */
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ===================================
+   FORM SECTION (Create Note)
+   =================================== */
+
+.form-section {
+  /* Add padding for spacing */
+  padding: 20px 0;
+}
+
+.form-section h2 {
+  /* Style the section heading */
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.note-form {
+  /* White background to stand out */
+  background-color: white;
+  
+  /* Internal spacing */
+  padding: 25px;
+  
+  /* Round the corners */
+  border-radius: 8px;
+  
+  /* Subtle shadow for depth */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===================================
+   FORM GROUPS (Input Organization)
+   =================================== */
+
+.form-group {
+  /* Add space between form groups */
+  margin-bottom: 20px;
+}
+
+/* Remove bottom margin from last group to avoid extra space */
+.form-group:last-of-type {
+  margin-bottom: 0;
+}
+
+.form-group label {
+  /* Display as block to put label above input */
+  display: block;
+  
+  /* Bold text for clarity */
+  font-weight: bold;
+  color: #333;
+  
+  /* Space between label and input */
+  margin-bottom: 8px;
+  
+  /* Slightly smaller text */
+  font-size: 0.95rem;
+}
+
+/* ===================================
+   FORM INPUTS (Text Fields)
+   =================================== */
+
+.form-input,
+.form-textarea {
+  /* Full width of container */
+  width: 100%;
+  
+  /* Internal spacing inside input */
+  padding: 12px;
+  
+  /* Border styling - light gray border */
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  
+  /* Font matching body */
+  font-size: 1rem;
+  font-family: inherit;
+  
+  /* Smooth transition for focus effect */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Style when user clicks into an input (focus state) */
+.form-input:focus,
+.form-textarea:focus {
+  /* Remove default browser outline */
+  outline: none;
+  
+  /* Change border to blue when focused */
+  border-color: #1976d2;
+  
+  /* Add subtle blue shadow for visual feedback */
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+}
+
+.form-textarea {
+  /* Allow vertical resizing only */
+  resize: vertical;
+  
+  /* Minimum height for text input */
+  min-height: 100px;
+}
+
+/* ===================================
+   BUTTONS
+   =================================== */
+
+.btn {
+  /* Internal spacing */
+  padding: 12px 24px;
+  
+  /* No border style - we'll use background color instead */
+  border: none;
+  
+  /* Round corners */
+  border-radius: 5px;
+  
+  /* Normal font size */
+  font-size: 1rem;
+  font-weight: bold;
+  
+  /* Cursor changes to pointer on hover */
+  cursor: pointer;
+  
+  /* Smooth color and shadow transitions */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  font-family: inherit;
+}
+
+/* Submit button styling - for adding notes */
+.btn-submit {
+  /* Full width button */
+  width: 100%;
+  
+  /* Blue background */
+  background-color: #1976d2;
+  color: white;
+  
+  /* Space from inputs above */
+  margin-top: 15px;
+}
+
+/* Hover effect on submit button */
+.btn-submit:hover {
+  /* Darker blue on hover */
+  background-color: #1565c0;
+  
+  /* Subtle shadow on hover for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Delete button styling */
+.btn-delete {
+  /* Red background for delete action */
+  background-color: #d32f2f;
+  color: white;
+  
+  /* Smaller size for compact look */
+  padding: 8px 16px;
+}
+
+/* Hover effect on delete button */
+.btn-delete:hover {
+  /* Darker red on hover */
+  background-color: #b71c1c;
+  
+  /* Shadow for depth */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ===================================
+   NOTES SECTION (List of Notes)
+   =================================== */
+
+.notes-section {
+  /* Add padding for spacing */
+  padding: 20px 0;
+}
+
+.notes-section h2 {
+  /* Style the section heading */
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* ===================================
+   NOTES LIST (Grid Layout)
+   =================================== */
+
+.notes-list {
+  /* Use CSS Grid for responsive layout */
+  display: grid;
+  
+  /* Create columns that adjust to screen size */
+  /* auto-fill = create as many columns as fit */
+  /* minmax(250px, 1fr) = each column is 250px minimum, 1fr maximum */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  
+  /* Space between cards */
+  gap: 20px;
+}
+
+/* Message shown when no notes exist */
+.no-notes {
+  /* Center the text */
+  text-align: center;
+  
+  /* Light gray color for subtle appearance */
+  color: #999;
+  
+  /* More padding for prominence */
+  padding: 40px 20px;
+  
+  /* Slightly larger font */
+  font-size: 1.1rem;
+}
+
+/* ===================================
+   NOTE CARD (Individual Note)
+   =================================== */
+
+.note-card {
+  /* White background */
+  background-color: white;
+  
+  /* Internal spacing */
+  padding: 20px;
+  
+  /* Round the corners */
+  border-radius: 8px;
+  
+  /* Light shadow for depth */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+  /* Subtle border on top for visual interest */
+  border-top: 4px solid #1976d2;
+  
+  /* Smooth transitions for hover effects */
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect on note cards */
+.note-card:hover {
+  /* Lift card up slightly */
+  transform: translateY(-4px);
+  
+  /* Larger shadow on hover for depth */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.note-title {
+  /* Larger, bold text for title */
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  
+  /* Space between title and body */
+  margin-bottom: 10px;
+}
+
+.note-body {
+  /* Regular text */
+  font-size: 1rem;
+  color: #666;
+  
+  /* Better line spacing for readability */
+  line-height: 1.5;
+  
+  /* Space between body and delete button */
+  margin-bottom: 15px;
+}
+
+/* ===================================
+   RESPONSIVE DESIGN (Mobile Devices)
+   =================================== */
+
+/* Adjust layout for screens smaller than 600px */
+@media (max-width: 600px) {
+  .app {
+    /* Smaller padding on mobile */
+    padding: 10px;
+  }
+
+  .app-header {
+    /* Less padding on mobile */
+    padding: 20px 15px;
+    margin-bottom: 20px;
+  }
+
+  .app-header h1 {
+    /* Smaller heading on mobile */
+    font-size: 1.8rem;
+  }
+
+  .notes-list {
+    /* Single column on mobile devices */
+    grid-template-columns: 1fr;
+  }
+
+  .note-form {
+    /* Smaller padding on mobile */
+    padding: 15px;
+  }
+
+  .form-input,
+  .form-textarea {
+    /* Slightly smaller text on mobile for readability */
+    font-size: 16px; /* Prevents auto-zoom on iOS */
+  }
+}
